@@ -11,6 +11,9 @@
 		3E35573121B44A0C0008FDC7 /* AOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35572821B44A0C0008FDC7 /* AOC.framework */; };
 		3E35573621B44A0C0008FDC7 /* AOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35573521B44A0C0008FDC7 /* AOCTests.swift */; };
 		3E35573821B44A0C0008FDC7 /* AOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E35572A21B44A0C0008FDC7 /* AOC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E35574121B44A620008FDC7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35574021B44A620008FDC7 /* Day.swift */; };
+		3E35574321B44A920008FDC7 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35574221B44A920008FDC7 /* Input.swift */; };
+		3E35574521B44CF50008FDC7 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35574421B44CF50008FDC7 /* Regex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		3E35573021B44A0C0008FDC7 /* AOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E35573521B44A0C0008FDC7 /* AOCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOCTests.swift; sourceTree = "<group>"; };
 		3E35573721B44A0C0008FDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E35574021B44A620008FDC7 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		3E35574221B44A920008FDC7 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		3E35574421B44CF50008FDC7 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,9 @@
 		3E35573F21B44A2B0008FDC7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				3E35574021B44A620008FDC7 /* Day.swift */,
+				3E35574221B44A920008FDC7 /* Input.swift */,
+				3E35574421B44CF50008FDC7 /* Regex.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -208,6 +217,7 @@
 					};
 					3E35572721B44A0C0008FDC7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					3E35572F21B44A0C0008FDC7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -263,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E35574321B44A920008FDC7 /* Input.swift in Sources */,
+				3E35574121B44A620008FDC7 /* Day.swift in Sources */,
+				3E35574521B44CF50008FDC7 /* Regex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +436,7 @@
 		3E35573A21B44A0C0008FDC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -443,6 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.pixelgala.AOC;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -452,6 +467,7 @@
 		3E35573B21B44A0C0008FDC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -481,6 +497,7 @@
 		3E35573D21B44A0C0008FDC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VEE2RMJ48S;
@@ -499,6 +516,7 @@
 		3E35573E21B44A0C0008FDC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VEE2RMJ48S;
