@@ -40,6 +40,7 @@
 		3E3557C121B44E640008FDC7 /* 2018-Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35579021B44E640008FDC7 /* 2018-Day3.swift */; };
 		3E3557C221B44E640008FDC7 /* 2018-Day23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35579221B44E640008FDC7 /* 2018-Day23.swift */; };
 		3E3557C921B44FEF0008FDC7 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35574221B44A920008FDC7 /* Input.swift */; };
+		3E3557CC21B45F9D0008FDC7 /* Year2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3557CB21B45F9D0008FDC7 /* Year2018Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		3E35579021B44E640008FDC7 /* 2018-Day3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2018-Day3.swift"; sourceTree = "<group>"; };
 		3E35579221B44E640008FDC7 /* 2018-Day23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "2018-Day23.swift"; sourceTree = "<group>"; };
 		3E35579321B44E640008FDC7 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		3E3557CA21B45C090008FDC7 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		3E3557CB21B45F9D0008FDC7 /* Year2018Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year2018Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				3E35573521B44A0C0008FDC7 /* AOCTests.swift */,
+				3E3557CB21B45F9D0008FDC7 /* Year2018Tests.swift */,
 				3E35573721B44A0C0008FDC7 /* Info.plist */,
 			);
 			path = AOCTests;
@@ -249,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				3E35574A21B44DC70008FDC7 /* 2018-Day1.swift */,
+				3E3557CA21B45C090008FDC7 /* input.txt */,
 			);
 			path = "Day 1";
 			sourceTree = "<group>";
@@ -644,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E35573621B44A0C0008FDC7 /* AOCTests.swift in Sources */,
+				3E3557CC21B45F9D0008FDC7 /* Year2018Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
