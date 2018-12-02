@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import AOC
 
-print("Hello, World!")
+let day = Year2018.Day1()
+let (p1, p2) = day.run()
+
+print(p1, p2)
+print("Hello")
 
