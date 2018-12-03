@@ -42,7 +42,7 @@
 		3E3557C221B44E640008FDC7 /* 2018-Day23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35579221B44E640008FDC7 /* 2018-Day23.swift */; };
 		3E3557C921B44FEF0008FDC7 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35574221B44A920008FDC7 /* Input.swift */; };
 		3E3557CC21B45F9D0008FDC7 /* Year2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3557CB21B45F9D0008FDC7 /* Year2018Tests.swift */; };
-		3EF9C7DE21B49F2300E1707F /* Sequence+Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9C7DD21B49F2300E1707F /* Sequence+Cycle.swift */; };
+		3EF9C7DE21B49F2300E1707F /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9C7DD21B49F2300E1707F /* Sequence+.swift */; };
 		3EF9C7E021B4A2ED00E1707F /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9C7DF21B4A2ED00E1707F /* Measure.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,7 +133,7 @@
 		3E35579321B44E640008FDC7 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		3E3557CA21B45C090008FDC7 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		3E3557CB21B45F9D0008FDC7 /* Year2018Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year2018Tests.swift; sourceTree = "<group>"; };
-		3EF9C7DD21B49F2300E1707F /* Sequence+Cycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Cycle.swift"; sourceTree = "<group>"; };
+		3EF9C7DD21B49F2300E1707F /* Sequence+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+.swift"; sourceTree = "<group>"; };
 		3EF9C7DF21B4A2ED00E1707F /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -485,7 +485,7 @@
 		3EF9C7DC21B49EEF00E1707F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3EF9C7DD21B49F2300E1707F /* Sequence+Cycle.swift */,
+				3EF9C7DD21B49F2300E1707F /* Sequence+.swift */,
 				3E09C15021B4B98A00F3E3BE /* Array+Hashable.swift */,
 			);
 			path = Extensions;
@@ -648,7 +648,7 @@
 				3E35579C21B44E640008FDC7 /* 2018-Day14.swift in Sources */,
 				3E3557C121B44E640008FDC7 /* 2018-Day3.swift in Sources */,
 				3E35579E21B44E640008FDC7 /* 2018-Day17.swift in Sources */,
-				3EF9C7DE21B49F2300E1707F /* Sequence+Cycle.swift in Sources */,
+				3EF9C7DE21B49F2300E1707F /* Sequence+.swift in Sources */,
 				3E3557BD21B44E640008FDC7 /* 2018-Day6.swift in Sources */,
 				3E3557AB21B44E640008FDC7 /* 2018-Day22.swift in Sources */,
 				3E3557C921B44FEF0008FDC7 /* Input.swift in Sources */,

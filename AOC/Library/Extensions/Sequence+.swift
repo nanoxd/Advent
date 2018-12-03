@@ -13,6 +13,15 @@ extension Sequence {
 
             return result
         }
+    }
+}
 
+
+
+extension Sequence where Element: Hashable {
+    // Creates a histogram of contents of arrayu
+    func histogram() -> [Element: Int] {
+        return Dictionary(grouping: self, by: { $0 })
+            .mapValues({ $0.count })
     }
 }
