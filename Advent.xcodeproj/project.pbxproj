@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E09C15121B4B98A00F3E3BE /* Array+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09C15021B4B98A00F3E3BE /* Array+Hashable.swift */; };
 		3E35571D21B449D90008FDC7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35571C21B449D90008FDC7 /* main.swift */; };
 		3E35573121B44A0C0008FDC7 /* AOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35572821B44A0C0008FDC7 /* AOC.framework */; };
 		3E35573621B44A0C0008FDC7 /* AOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35573521B44A0C0008FDC7 /* AOCTests.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E09C15021B4B98A00F3E3BE /* Array+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Hashable.swift"; sourceTree = "<group>"; };
 		3E35571921B449D90008FDC7 /* Advent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Advent; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E35571C21B449D90008FDC7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3E35572821B44A0C0008FDC7 /* AOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -484,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				3EF9C7DD21B49F2300E1707F /* Sequence+Cycle.swift */,
+				3E09C15021B4B98A00F3E3BE /* Array+Hashable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				3E3557C221B44E640008FDC7 /* 2018-Day23.swift in Sources */,
 				3E3557AC21B44E640008FDC7 /* 2018-Day15.swift in Sources */,
 				3E3557B321B44E640008FDC7 /* 2018-Day7.swift in Sources */,
+				3E09C15121B4B98A00F3E3BE /* Array+Hashable.swift in Sources */,
 				3E3557A021B44E640008FDC7 /* 2018-Day11.swift in Sources */,
 				3E3557B421B44E640008FDC7 /* 2018-Day13.swift in Sources */,
 				3E35579A21B44E640008FDC7 /* 2018-Day12.swift in Sources */,
