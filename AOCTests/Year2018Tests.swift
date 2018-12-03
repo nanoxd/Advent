@@ -7,7 +7,7 @@ class Test2018: XCTestCase {
         let (p1, p2) = d.run()
 
         XCTAssertEqual(p1, "445")
-        XCTAssertEqual(p2, "")
+        XCTAssertEqual(p2, "219")
     }
 
     func testDay2() {

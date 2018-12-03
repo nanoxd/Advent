@@ -10,7 +10,21 @@ extension Year2018 {
         }
 
         public override func part2() -> String {
-            return ""
+            let frequencies = input.trimmed.lines.integers
+            var current = 0
+            var seen: Set<Int> = [0]
+
+            for frequency in frequencies.cycled {
+                current += frequency
+
+                if seen.contains(current) {
+                    break
+                }
+
+                seen.insert(current)
+            }
+
+            return String(current)
         }
     }
 }
