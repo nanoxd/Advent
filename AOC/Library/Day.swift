@@ -42,7 +42,10 @@ public class Day {
     }
 
     public func run() -> (String, String) {
-        return (part1(), part2())
+        let p1 = measure(name: "Part 1") { part1() }
+        let p2 = measure(name: "Part 2") { part2() }
+        
+        return (p1, p2)
     }
 
     public func part1() -> String { fatalError("Implement \(#function)") }
