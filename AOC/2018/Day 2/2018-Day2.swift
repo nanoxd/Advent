@@ -1,3 +1,5 @@
+import Foundation
+
 extension Year2018 {
     public class Day2: Day {
         public init() { super.init(inputSource: .file(#file)) }
@@ -16,25 +18,11 @@ extension Year2018 {
         //
         //        What is the checksum for your list of box IDs?
         public override func part1() -> String {
-            let ids = input.trimmed.lines.characters
-            let idCounts = Array(ids
-                .lazy
-                .map { $0.histogram }
-                .map { histogram in
-                    return histogram
-                        .filter { $0.value == 2 || $0.value == 3 }
-                        .map { $0.value }
-                        .unique
-                }
-                .reduce(into: []) { acc, checksum in
-                    acc.append(contentsOf: checksum)
-                })
-                .histogram
+            let ids = input.trimmed.lines.raw
 
-            let checksum = idCounts
-                .reduce(into: 1) { acc, count in
-                    acc *= count.value
-            }
+            let counts = ids.map { $0.histogram().values }
+            let checksum = counts.count(where: { $0.contains(2) })
+                    * counts.count(where: { $0.contains(3) })
 
             return String(checksum)
         }
