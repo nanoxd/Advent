@@ -28,7 +28,15 @@ extension Year2018 {
         }
         
         override public func part2() -> String {
-            return ""
+            let ids = input.trimmed.lines.raw
+            return ids
+                .compactMap { id in
+                    ids
+                        .first(where: { id.distance(to: $0) == 1 })
+                        .map { (id, $0) }
+                }
+                .map { $0.intersection(with: $1) }
+                .first ?? ""
         }
     }
 }
