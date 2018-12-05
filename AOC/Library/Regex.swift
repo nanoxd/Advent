@@ -50,19 +50,15 @@ extension Regex: ExpressibleByStringLiteral {
 }
 
 public struct RegexMatch {
-    private let matches: Array<String?>
+    let matches: [String]
 
     fileprivate init(result: NSTextCheckingResult, source: String) {
         let nsSource = source as NSString
 
-        var matches = Array<String?>()
+        var matches = [String]()
         for i in 0 ..< result.numberOfRanges {
             let r = result.range(at: i)
-            if r.location == NSNotFound {
-                matches.append(nil)
-            } else {
-                matches.append(nsSource.substring(with: r))
-            }
+            matches.append(nsSource.substring(with: r))
         }
 
         self.matches = matches

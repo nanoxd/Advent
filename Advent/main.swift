@@ -9,7 +9,7 @@
 import Foundation
 import AOC
 
-let day = Year2018.Day2()
+let day = Year2018.Day3()
 let (p1, p2) = day.run()
 
 print(p1, p2)
