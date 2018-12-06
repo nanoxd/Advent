@@ -18,7 +18,7 @@ struct Entry: CustomStringConvertible {
     private let rawEntry: String
     let entry: EntryType
 
-    enum EntryType {
+    enum EntryType: Equatable {
         case wakesUp
         case fallsAsleep
         case shiftBegan(number: Int)
@@ -75,6 +75,22 @@ struct Log: CustomStringConvertible {
     private var entries: [Entry]
     let guardID: Int
 
+    var minutesAsleep: Int {
+        let asleep = entries.filter { .fallsAsleep == $0.entry }
+        let awake = entries.filter { $0.entry == .wakesUp }
+
+        let timeAsleep = zip(asleep, awake)
+            .compactMap { asleep, awake in
+                let components = NSCalendar.current
+                    .dateComponents([.minute], from: asleep.date, to: awake.date)
+
+                return components.minute
+            }
+            .reduce(0, +)
+
+        return timeAsleep
+    }
+
     init(guardID: Int, entry: Entry) {
         self.guardID = guardID
         self.entries = [entry]
@@ -87,7 +103,7 @@ struct Log: CustomStringConvertible {
     // MARK: CustomStringConvertible
 
     var description: String {
-        return "Guard #\(guardID) w/ \(entries.count) entries"
+        return "Guard #\(guardID): Time Asleep: \(minutesAsleep)"
     }
 }
 
