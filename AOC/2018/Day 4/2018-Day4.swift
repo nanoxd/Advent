@@ -118,6 +118,7 @@ extension Year2018 {
         public init() { super.init(inputSource: .file(#file)) }
         
         override public func part1() -> String {
+            let guardLogs = [Int: [Log]]()
             let clumpedEntries = entries
                 .reduce(into: [Log]()) { acc, entry in
                     switch entry.entry {
@@ -127,6 +128,19 @@ extension Year2018 {
                     case .wakesUp, .fallsAsleep:
                         acc[acc.endIndex - 1].append(entry)
                     }
+            }
+                .reduce(into: guardLogs) { acc, log in
+                    if acc[log.guardID] != nil {
+                        acc[log.guardID]?.append(log)
+                    } else {
+                        acc[log.guardID] = [log]
+                    }
+            }
+                .max { log1, log2 in
+                    let minutesAsleep1 = log1.value.reduce(into: 0, { $0 + $1.minutesAsleep })
+                    let minutesAsleep2 = log2.value.reduce(into: 0, { $0 + $1.minutesAsleep })
+
+                    return minutesAsleep1 > minutesAsleep2
             }
 
             return "\(clumpedEntries)"
