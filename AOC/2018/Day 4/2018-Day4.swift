@@ -34,6 +34,13 @@ struct Entry: CustomStringConvertible {
                 self = .shiftBegan(number: Int(matches[1])!)
             }
         }
+
+        var guardID: Int? {
+            switch self {
+            case let .shiftBegan(number): return number
+            default: return nil
+            }
+        }
     }
 
     init?(from string: String) {
@@ -64,6 +71,26 @@ extension Entry: Comparable {
     }
 }
 
+struct Log: CustomStringConvertible {
+    private var entries: [Entry]
+    let guardID: Int
+
+    init(guardID: Int, entry: Entry) {
+        self.guardID = guardID
+        self.entries = [entry]
+    }
+
+    mutating func append(_ entry: Entry) {
+        entries.append(entry)
+    }
+
+    // MARK: CustomStringConvertible
+
+    var description: String {
+        return "Guard #\(guardID) w/ \(entries.count) entries"
+    }
+}
+
 extension Year2018 {
     public class Day4: Day {
         lazy var entries: [Entry] = {
@@ -76,10 +103,11 @@ extension Year2018 {
         
         override public func part1() -> String {
             let clumpedEntries = entries
-                .reduce(into: [[Entry]]()) { acc, entry in
+                .reduce(into: [Log]()) { acc, entry in
                     switch entry.entry {
-                    case let .shiftBegan(number):
-                        acc.append([entry])
+                    case .shiftBegan(let id):
+                        let log = Log(guardID: id, entry: entry)
+                        acc.append(log)
                     case .wakesUp, .fallsAsleep:
                         acc[acc.endIndex - 1].append(entry)
                     }
