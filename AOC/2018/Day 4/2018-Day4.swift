@@ -76,7 +76,7 @@ struct Log: CustomStringConvertible {
     let guardID: Int
 
     var minutesAsleep: Int {
-        let asleep = entries.filter { .fallsAsleep == $0.entry }
+        let asleep = entries.filter { $0.entry == .fallsAsleep }
         let awake = entries.filter { $0.entry == .wakesUp }
 
         let timeAsleep = zip(asleep, awake)
