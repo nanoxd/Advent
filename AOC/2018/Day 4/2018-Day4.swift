@@ -75,8 +75,17 @@ extension Year2018 {
         public init() { super.init(inputSource: .file(#file)) }
         
         override public func part1() -> String {
+            let clumpedEntries = entries
+                .reduce(into: [[Entry]]()) { acc, entry in
+                    switch entry.entry {
+                    case let .shiftBegan(number):
+                        acc.append([entry])
+                    case .wakesUp, .fallsAsleep:
+                        acc[acc.endIndex - 1].append(entry)
+                    }
+            }
 
-            return "\(answer)"
+            return "\(clumpedEntries)"
         }
         
         override public func part2() -> String {
