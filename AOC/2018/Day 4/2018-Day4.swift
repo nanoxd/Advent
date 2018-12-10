@@ -97,10 +97,10 @@ struct Log: CustomStringConvertible {
         return timeAsleep
     }
 
-    var minutes: [[Int]] {
+    var minutes: [Range<Int>] {
         return sleepCycle
-            .compactMap { (asleep, awake) -> [Int] in
-                return Array(asleep.minute..<awake.minute)
+            .compactMap { (asleep, awake) -> Range<Int> in
+                return asleep.minute..<awake.minute
             }
     }
 
@@ -183,7 +183,20 @@ extension Year2018 {
         }
 
         override public func part2() -> String {
-            return ""
+            let sleepByGuards = entries
+                .mapValues { $0.map { log in log.minutes }.joined() }
+
+            let sleepPerMinuteByGuard = sleepByGuards
+                .mapValues { $0.joined().histogram() }
+                .filter { !$0.value.isEmpty }
+
+            let sleepiestMinutePerGuard = sleepPerMinuteByGuard
+                .mapValues({ $0.max(by: { $0.value < $1.value })! })
+
+            let sleepiestMinute = sleepiestMinutePerGuard
+                .max(by: { $0.value.value < $1.value.value })!
+
+            return "\(sleepiestMinute.key * sleepiestMinute.value.key)"
         }
     }
 }
