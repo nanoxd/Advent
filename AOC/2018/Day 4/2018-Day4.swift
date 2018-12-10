@@ -122,17 +122,12 @@ struct Log: CustomStringConvertible {
 
 extension Year2018 {
     public class Day4: Day {
-        lazy var entries: [Entry] = {
+        lazy var entries: [Int: [Log]] = {
+            let guardLogs = [Int: [Log]]()
+
             return input.trimmed.rawLines
                 .compactMap { Entry(from: $0) }
                 .sorted()
-        }()
-
-        public init() { super.init(inputSource: .file(#file)) }
-        
-        override public func part1() -> String {
-            let guardLogs = [Int: [Log]]()
-            let clumpedEntries = entries
                 .reduce(into: [Log]()) { acc, entry in
                     switch entry.entry {
                     case .shiftBegan(let id):
@@ -141,7 +136,7 @@ extension Year2018 {
                     case .wakesUp, .fallsAsleep:
                         acc[acc.endIndex - 1].append(entry)
                     }
-            }
+                }
                 .reduce(into: guardLogs) { acc, log in
                     if acc[log.guardID] != nil {
                         acc[log.guardID]?.append(log)
@@ -149,6 +144,12 @@ extension Year2018 {
                         acc[log.guardID] = [log]
                     }
             }
+        }()
+
+        public init() { super.init(inputSource: .file(#file)) }
+        
+        override public func part1() -> String {
+            let clumpedEntries = entries
                 .max { log1, log2 in
                     let minutesAsleep1 = log1.value
                         .reduce(0, { $0 + $1.minutesAsleep })
