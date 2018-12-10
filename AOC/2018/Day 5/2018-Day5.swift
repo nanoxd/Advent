@@ -1,5 +1,7 @@
 extension Year2018 {
     public class Day5: Day {
+        let lowercaseLetters = "abcdefghijklmnopqrstuvwxyz"
+
         public init() { super.init(inputSource: .file(#file)) }
         
         override public func part1() -> String {
@@ -8,7 +10,14 @@ extension Year2018 {
         }
         
         override public func part2() -> String {
-            return ""
+            let uppercasedLetters = lowercaseLetters.uppercased()
+
+            return zip(lowercaseLetters, uppercasedLetters)
+                .map { (String($0), String($1) ) }
+                .map { input.trimmed.raw.removing($0).removing($1) }
+                .map { reduceUnits(from: $0).count }
+                .min()!
+                .description
         }
 
         public func reduceUnits(from units: String) -> String {
@@ -25,3 +34,8 @@ extension Year2018 {
     }
 }
 
+extension String {
+    func removing(_ string: String) -> String {
+        return replacingOccurrences(of: string, with: "")
+    }
+}
