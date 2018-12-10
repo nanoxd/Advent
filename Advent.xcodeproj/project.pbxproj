@@ -43,6 +43,7 @@
 		3E3557C221B44E640008FDC7 /* 2018-Day23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35579221B44E640008FDC7 /* 2018-Day23.swift */; };
 		3E3557C921B44FEF0008FDC7 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35574221B44A920008FDC7 /* Input.swift */; };
 		3E3557CC21B45F9D0008FDC7 /* Year2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3557CB21B45F9D0008FDC7 /* Year2018Tests.swift */; };
+		3E78015D21BDF95B00C3170C /* Introspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E78015C21BDF95B00C3170C /* Introspectable.swift */; };
 		3EF9C7DE21B49F2300E1707F /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9C7DD21B49F2300E1707F /* Sequence+.swift */; };
 		3EF9C7E021B4A2ED00E1707F /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9C7DF21B4A2ED00E1707F /* Measure.swift */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,7 @@
 		3E35579321B44E640008FDC7 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		3E3557CA21B45C090008FDC7 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		3E3557CB21B45F9D0008FDC7 /* Year2018Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year2018Tests.swift; sourceTree = "<group>"; };
+		3E78015C21BDF95B00C3170C /* Introspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introspectable.swift; sourceTree = "<group>"; };
 		3EF9C7DD21B49F2300E1707F /* Sequence+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+.swift"; sourceTree = "<group>"; };
 		3EF9C7DF21B4A2ED00E1707F /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +223,7 @@
 				3E35574021B44A620008FDC7 /* Day.swift */,
 				3E35574221B44A920008FDC7 /* Input.swift */,
 				3E35574421B44CF50008FDC7 /* Regex.swift */,
+				3E78015C21BDF95B00C3170C /* Introspectable.swift */,
 				3EF9C7DF21B4A2ED00E1707F /* Measure.swift */,
 			);
 			path = Library;
@@ -664,6 +667,7 @@
 				3E3557A521B44E640008FDC7 /* 2018-Day18.swift in Sources */,
 				3E3557B721B44E640008FDC7 /* 2018-Day24.swift in Sources */,
 				3E35574521B44CF50008FDC7 /* Regex.swift in Sources */,
+				3E78015D21BDF95B00C3170C /* Introspectable.swift in Sources */,
 				3E3557BE21B44E640008FDC7 /* 2018-Day8.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
